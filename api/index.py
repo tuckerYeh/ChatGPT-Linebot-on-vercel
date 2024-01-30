@@ -43,14 +43,14 @@ def handle_message(event):
         working_status = True
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="我可以說話囉，歡迎來跟我互動 ^_^ "))
+            TextSendMessage(text="我可以說話囉，我是TuckerAI,提供了ChatGPT的功能,只需輸入您的問題或要求,就會立即為您提供答案或解決方案!"))
         return
 
     if event.message.text == "閉嘴":
         working_status = False
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="好的，我乖乖閉嘴 > <，如果想要我繼續說話，請跟我說 「說話」 > <"))
+            TextSendMessage(text="沒問題！如果想要我繼續說話，請跟我說 「說話」"))
         return
 
     if working_status:
